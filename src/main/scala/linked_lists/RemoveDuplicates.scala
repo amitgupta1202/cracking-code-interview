@@ -12,6 +12,7 @@ import scala.collection.mutable
  */
 object RemoveDuplicates extends App {
 
+  //O(n)
   @tailrec
   def dd(ll: LinkedList): Unit =
     if (ll.next.isEmpty) ()
@@ -25,6 +26,8 @@ object RemoveDuplicates extends App {
       }
     }
 
+  //O(n)
+  @tailrec
   def dd_without_modifying(linkedList: Option[LinkedList], lastNodeOfResult: LinkedList, values: mutable.Set[Int]): LinkedList = {
     if (linkedList.isEmpty) lastNodeOfResult
     else {
